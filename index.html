@@ -16,8 +16,9 @@
   <!-- Script -->
   <!-- Font Awesome-->
   <script src="https://kit.fontawesome.com/a5e7327b49.js" crossorigin="anonymous"></script>
-  
-  <script defer src="./js/main.js"></script>
+
+  <script defer src="./js/common.js"></script>
+  <script defer src="./js/characterList.js"></script>
 </head>
 <body>
   <div class="wrap">
@@ -47,96 +48,11 @@
         </p>
 
         <div class="btn__group">
-          <a href="#/" class="btn">Add character</a>
-          <button type="button" class="btn btn-cancel">Delete character</button>
+          <a href="./page/create-profile.html" class="btn">Add character</a>
+          <button type="button" class="btn btn-cancel" id="deleteBtn">Delete character</button>
         </div>
 
-        <ul class="character__list">
-          <li class="character__item">
-            <div class="checkbox">
-              <label class="label">
-                <input type="checkbox"/>
-                <span class="checkmark">
-                  <i class="fa-solid fa-check"></i>
-                </span>
-              </label>
-            </div>
-
-            <div class="img woody"></div>
-
-            <div class="item- info">
-              <p class="name">
-                name
-              </p>
-              <p class="info kind">
-                <i class="fa-solid fa-tag"></i>
-                .kind
-              </p>
-              <p class="info trait">
-                <i class="fa-solid fa-star"></i>
-                trait
-              </p>
-            </div>
-
-            <a href="#/viewProfile" class="btn">View Profile</a>
-          </li>
-          <li class="character__item">
-            <div class="checkbox">
-              <label class="label">
-                <input type="checkbox"/>
-                <span class="checkmark">
-                  <i class="fa-solid fa-check"></i>
-                </span>
-              </label>
-            </div>
-
-            <div class="img woody"></div>
-
-            <div class="item- info">
-              <p class="name">
-                123
-              </p>
-              <p class="info kind">
-                <i class="fa-solid fa-tag"></i>
-                1234
-              </p>
-              <p class="info trait">
-                <i class="fa-solid fa-star"></i>
-                1345
-              </p>
-            </div>
-
-            <a href="#/viewProfile" class="btn">View Profile</a>
-          </li>
-          <li class="character__item">
-            <div class="checkbox">
-              <label class="label">
-                <input type="checkbox"/>
-                <span class="checkmark">
-                  <i class="fa-solid fa-check"></i>
-                </span>
-              </label>
-            </div>
-
-            <div class="img woody"></div>
-
-            <div class="item- info">
-              <p class="name">
-                123
-              </p>
-              <p class="info kind">
-                <i class="fa-solid fa-tag"></i>
-                1234
-              </p>
-              <p class="info trait">
-                <i class="fa-solid fa-star"></i>
-                1345
-              </p>
-            </div>
-
-            <a href="#/viewProfile" class="btn">View Profile</a>
-          </li>
-        </ul>
+        <ul class="character__list"></ul>
       </div>
     </main>
 
