@@ -56,20 +56,30 @@ const deleteBtn = document.querySelector('#deleteBtn');
 deleteBtn.addEventListener('click', () => {
   const checkItems = document.querySelectorAll('.character__item input[type="checkbox"]:checked');
   
+  const deleteIndexes = [];
+
   checkItems.forEach(checkbox => {
     const index = parseInt(checkbox.closest('.character__item').dataset.index);
-
-    viewsObj.splice(index, 1);
+    deleteIndexes.push(index);
   });
+
+  for (let i = deleteIndexes.length - 1; i >= 0; i--) {
+    const deleteIndex = deleteIndexes[i];
+    viewsObj.splice(deleteIndex, 1);
+  }
+
+  for (let i = 0; i < viewsObj.length; i++) {
+    viewsObj[i].index = i;
+  }
 
   renderCharacterView();
 
   localStorage.setItem('views', JSON.stringify(viewsObj));
 });
 
-// 캐릭터 뷰를 다시 렌더링하는 함수
 function renderCharacterView() {
   characterView.innerHTML = '';
+
   viewsObj.forEach(item => {
     characterView.innerHTML += template(item);
   });

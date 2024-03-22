@@ -1,22 +1,22 @@
 // 이미지 업로드
 const fileInput = document.querySelector('.upload-file .input-file');
-const deleteBtn = document.querySelector('.upload-file .btn-cancel');
+const deleteImgBtn = document.querySelector('.upload-file .btn-cancel');
 
 fileInput.addEventListener('change', () => {
   const fileReader = new FileReader();
   fileReader.addEventListener('load', () => {
     const uploadImg = fileReader.result;
     document.querySelector('.img-view').style.backgroundImage = `url(${uploadImg})`;
-    deleteBtn.style.display = 'block';
+    deleteImgBtn.style.display = 'block';
   });
   fileReader.readAsDataURL(fileInput.files[0]);
 });
 
 // 이미지 삭제
-deleteBtn.addEventListener('click', () => {
+deleteImgBtn.addEventListener('click', () => {
   document.querySelector('.img-view').style.backgroundImage = '';
   fileInput.value = '';
-  deleteBtn.style.display = 'none';
+  deleteImgBtn.style.display = 'none';
 });
 
 // 폼 입력 제출
