@@ -33,7 +33,14 @@
         
           <form id="editForm" class="form">
             <div class="upload-file">
-              <div id="viewImg" class="img-view"></div>
+              <img id="viewImg" class="img-view" src="../assets/images/no_image.jpg" alt="no image">
+              <label for="file">
+                <div class="btn__group">
+                  <span class="btn btn-upload">Add Image</span>
+                  <button type="button" class="btn btn-cancel">Delete Image</button>
+                </div>
+                <input type="file" id="file" accept="image/*" class="input-file">
+              </label>
             </div>
 
             <div class="form__field">

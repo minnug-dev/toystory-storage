@@ -290,16 +290,19 @@ h1.title .logo--black {
   top: 2rem;
 }
 
-.character__item .img {
+.character__item .img-wrap {
   --width: 35rem;
   max-width: 100%;
   width: var(--width);
   height: calc(var(--width) * 2 / 3);
   margin: 0 auto 2.5rem;
   border: var(--border-black);
-  background-size: cover;
-  background-position: center;
-  background-image: url('../assets/images/character_woody.jpg');
+}
+
+.character__item .img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .character__item .item-info {
@@ -414,10 +417,7 @@ h1.title .logo--black {
   width: 100%;
   height: 25rem;
   border: var(--border-black);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-image: url('../assets/images/no_image.jpg');
+  object-fit: contain;
 }
 
 .upload-file .btn__group {
@@ -430,6 +430,10 @@ h1.title .logo--black {
 
 .upload-file .btn-cancel {
   display: none;
+}
+
+.upload-file .btn-cancel.is-active {
+  display: block;
 }
 
 .upload-file .input-file {
