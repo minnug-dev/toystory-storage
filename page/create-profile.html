@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My ToyStory Characters Storage</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="https://images.squarespace-cdn.com/content/v1/51cdafc4e4b09eb676a64e68/1435264757286-QH9383UPCS8TV2WX4JOB/favicon.ico?format=50w">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+  <link rel="stylesheet" href="../css/font.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- Script -->
+  <!-- Font Awesome-->
+  <script defer ="https://kit.fontawesome.com/a5e7327b49.js" crossorigin="anonymous"></script>
+  
+  <script defer src="../js/main.js"></script>
+  <script defer src="../js/createProfile.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <a href="../" class="logo"></a>
+    </header>
+
+    <main class="main">
+      <div class="profile new-profile">
+        <div class="profile-inner">
+          <h1 class="title">new&nbsp;<span class="logo--black"></span>&nbsp;character</h1>
+        
+          <form id="newForm" class="form form__new">
+            <div class="upload-file">
+              <div id="viewImg" class="img-view"></div>
+              <label for="file">
+                <div class="btn__group">
+                  <span class="btn btn-upload">Add Image</span>
+                  <button type="button" class="btn btn-cancel">Delete Image</button>
+                </div>
+                <input type="file" id="file" accept="image/*" class="input-file">
+              </label>
+            </div>
+            <div class="form__field field-name">
+              <label>
+                <span class="title">Name</span>
+                <input type="text" name="name" id="name" class="form__input">
+              </label>
+            </div>
+            <div class="form__field field-kind">
+              <label>
+                <span class="title">Kind of Toy</span>
+                <input type="text" name="kind" id="kind" class="form__input">
+              </label>
+            </div>
+            <div class="form__field field-trait">
+              <label>
+                <span class="title">Trait</span>
+                <textarea name="trait" id="trait" class="form__input"></textarea>
+              </label>
+            </div>
+            <div class="form-btn__group btn__group">
+              <button type="submit" class="btn btn-create" id="btnCreate">Create</button> 
+              <a href="#/" class="btn btn-cancel" id="btnCancel">Cancel</a> 
+            </div> 
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p class="copyright">
+          &copy; COPYRIGHT 
+          <span class="current-year"></span> 
+          ParkMinJoo. All Rights Reserved.
+        </p>
+    </footer>
+  </div>
+</body>
+</html>
