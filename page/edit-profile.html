@@ -17,7 +17,8 @@
   <!-- Font Awesome-->
   <script src="https://kit.fontawesome.com/a5e7327b49.js" crossorigin="anonymous"></script>
   
-  <script defer src="../js/main.js"></script>
+  <script defer src="../js/common.js"></script>
+  <script defer src="../js/editProfile.js"></script>
 </head>
 <body>
   <div class="wrap">
@@ -28,7 +29,7 @@
     <main class="main">
       <div class="profile edit-profile">
         <div class="profile-inner">
-          <h1 class="title">my&nbsp;<span class="logo--black"></span>&nbsp;profile</h1>
+          <h1 class="title">edit&nbsp;<span class="logo--black"></span>&nbsp;profile</h1>
         
           <form id="editForm" class="form">
             <div class="upload-file">
@@ -38,24 +39,24 @@
             <div class="form__field">
               <label>
                 <span class="title">Name</span>
-                <input type="text" value="Woody">
+                <input type="text" name="nickname" id="nickname" class="form__input">
               </label>
             </div>
             <div class="form__field">
               <label>
                 <span class="title">Kind</span>
-                <input type="text" value="Cowboy toy with pull-string voice box">
+                <input type="text" name="kind" id="kind" class="form__input">
               </label>
             </div>
             <div class="form__field">
               <label>
                 <span class="title">Trait</span>
-                <textarea value="Duke Caboom is a 1970s toy based on Canada’s greatest stuntman. Riding his powerful Caboom stunt-cycle, Duke is always prepared to show off his stunt poses with confidence and swagger. However, Woody learns quickly that Duke has an Achilles heel: He has never been able to do the awesome stunts advertised in his own toy commercial. For years, Duke has been sitting in an antique store, constantly reliving the failures of his tragic past."></textarea>
+                <input type="text" name="trait" id="trait" class="form__input">
               </label>
             </div>
             <div class="btn__group">
-              <button type="button" class="btn">save</button> 
-              <a href="#/" class="btn btn-cancel">cancel</a> 
+              <button type="submit" class="btn">save</button> 
+              <a href="../index.html" class="btn btn-cancel" id="backBtn">close</a> 
             </div> 
           </form>
         </div>
