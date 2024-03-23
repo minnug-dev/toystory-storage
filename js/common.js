@@ -1,3 +1,12 @@
+// 로딩 애니메이션
+const loading = document.querySelector(".loading-wrap");
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    loading.style.opacity = "0";
+    loading.style.visibility = "hidden";
+  }, 700)
+});
+
 // 현재 연도 반영
 const currentYear = document.querySelector('.current-year');
 currentYear.textContent = new Date().getFullYear();
