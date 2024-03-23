@@ -47,7 +47,7 @@ const template = (item) => {
   `;
 };
 
-// 화면에 보여주기
+// 메인 화면에 보여주기
 const characterView = document.querySelector(".character__list");
 for (let i = 0; i < viewsObj.length; i++) {
   characterView.innerHTML += template(viewsObj[i]);
@@ -83,6 +83,42 @@ function renderCharacterView() {
   characterView.innerHTML = '';
 
   viewsObj.forEach(item => {
+    characterView.innerHTML += template(item);
+  });
+}
+
+
+// 프로필 검색
+const searchInput = document.querySelector('#searchInput');
+const searchBtn = document.querySelector("#searchBtn");
+
+function searchProfile() {
+  const searchTerm = searchInput.value.trim().toLowerCase();
+  const filterViews = viewsObj.filter(item => {
+    return item.nickname.toLowerCase().includes(searchTerm);
+  });
+
+  profileView(filterViews);
+}
+
+searchBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  searchProfile();
+});
+
+searchInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    searchProfile();
+  }
+});
+
+function profileView(items) {
+  characterView.innerHTML = '';
+
+  const searchRender = items || viewsObj;
+  
+  searchRender.forEach(item => {
     characterView.innerHTML += template(item);
   });
 }

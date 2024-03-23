@@ -161,7 +161,8 @@ img {
 }
 
 .form__field input:focus,
-.form__field textarea:focus {
+.form__field textarea:focus,
+.search input:focus {
   background-color: var(--color-white);
   box-shadow: var(--box-shadow);
 }
