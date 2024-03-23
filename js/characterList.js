@@ -66,13 +66,15 @@ for (let i = 0; i < viewsObj.length; i++) {
 // 삭제 버튼 클릭 시 선택된 캐릭터 프로필 삭제
 const deleteBtn = document.querySelector('#deleteBtn');
 deleteBtn.addEventListener('click', () => {
-  const checkItems = document.querySelectorAll('.character__item input[type="checkbox"]:checked');
-  
   const deleteIndexes = [];
 
-  checkItems.forEach(checkbox => {
-    const index = parseInt(checkbox.closest('.character__item').dataset.index);
-    deleteIndexes.push(index);
+  const listItems = document.querySelectorAll(".character__list li");
+  listItems.forEach(function(item, index) {
+    const checkbox = item.closest('li').querySelector('input[type="checkbox"]:checked');
+    
+    if (checkbox && checkbox.checked) {
+        deleteIndexes.push(index);
+    }
   });
 
   for (let i = deleteIndexes.length - 1; i >= 0; i--) {
@@ -85,7 +87,6 @@ deleteBtn.addEventListener('click', () => {
   }
 
   renderCharacterView();
-
   localStorage.setItem('views', JSON.stringify(viewsObj));
 });
 

@@ -9,7 +9,6 @@ fileInput.addEventListener('change', () => {
     deleteImgBtn.classList.add('is-active');
     const imageDataURL = target.result;
     previewImg.src = imageDataURL;
-    localStorage.setItem('profileImage', imageDataURL);
   };
   fileReader.readAsDataURL(fileInput.files[0]);
 });
@@ -73,6 +72,7 @@ const editHanler = (e) => {
     console.error(e);
   }
   alert('✨ Edit Complete ✨')
+  location.href = '/';
 };
 
 editForm.addEventListener('submit', editHanler);

@@ -9,7 +9,6 @@ fileInput.addEventListener('change', () => {
     deleteImgBtn.classList.add('is-active');
     const imageDataURL = target.result;
     previewImg.src = imageDataURL;
-    localStorage.setItem('profileImage', imageDataURL);
   };
   fileReader.readAsDataURL(fileInput.files[0]);
 });
@@ -68,6 +67,7 @@ const submitHandler = (e) => {
     location.href = '/page/view-profile.html?index=' + index;
 
     alert("💛 Create New Profile 💛");
+    location.href = '/';
   } catch (e) {
     alert(e.message);
     console.error(e);
