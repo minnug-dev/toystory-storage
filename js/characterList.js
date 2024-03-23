@@ -1,4 +1,14 @@
-// 새로운 프로필 추가 시 캐릭터 아이템 생성
+// 로딩 애니메이션
+const loading = document.querySelector('.loading-wrap');
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    loading.style.opacity = '0';
+    loading.style.visibility = 'hidden';
+  }, 700)
+});
+
+
+// 새로운 프로필 추가 시 메인 화면에 보여주기
 let viewsStr = localStorage.getItem('views');
 
 if (viewsStr ===  null) {
@@ -47,8 +57,8 @@ const template = (item) => {
   `;
 };
 
-// 메인 화면에 보여주기
-const characterView = document.querySelector(".character__list");
+// 메인 화면에 프로필 리스트 보여주기
+const characterView = document.querySelector('.character__list');
 for (let i = 0; i < viewsObj.length; i++) {
   characterView.innerHTML += template(viewsObj[i]);
 }
@@ -90,7 +100,7 @@ function renderCharacterView() {
 
 // 프로필 검색
 const searchInput = document.querySelector('#searchInput');
-const searchBtn = document.querySelector("#searchBtn");
+const searchBtn = document.querySelector('#searchBtn');
 
 function searchProfile() {
   const searchTerm = searchInput.value.trim().toLowerCase();
@@ -101,13 +111,13 @@ function searchProfile() {
   profileView(filterViews);
 }
 
-searchBtn.addEventListener("click", (e) => {
+searchBtn.addEventListener('click', (e) => {
   e.preventDefault();
   searchProfile();
 });
 
-searchInput.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") {
+searchInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
     e.preventDefault();
     searchProfile();
   }
