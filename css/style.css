@@ -37,8 +37,7 @@ a {
 }
 
 button,
-input,
-textarea {
+input {
   display: block;
   font-family: "NanumBarunGothic", "Rubik", Helvetica, "Apple SD Gothic Neo", Dotum, 돋움, sans-serif;
   color: var(--color-black);
@@ -160,11 +159,15 @@ img {
   resize: none;
 }
 
-.form__field input:focus,
-.form__field textarea:focus,
-.search input:focus {
+.form__field input:focus {
+  border-color: var(--color-yellow);
   background-color: var(--color-white);
   box-shadow: var(--box-shadow);
+}
+
+.search input:focus {
+  box-shadow: var(--box-shadow);
+  background-color: var(--color-white);
 }
 
 .checkbox .label {
@@ -452,20 +455,9 @@ h1.title .logo--black {
 }
 
 /* Profile - VIEW */
-.view-profile .form__field input:focus {
-  background-color: var(--bg-white);
-  box-shadow: none;
-}
-
-/* Profile - EDIT */
-.edit-profile .form__field input {
-  background-color: transparent;
-  box-shadow: none;
-}
-
-.edit-profile .form__field input:focus {
-  background-color: var(--bg-white);
-  box-shadow: var(--box-shadow);
+.view-profile .form__field input {
+  border-color: var(--color-white);
+  background-color: var(--color-white);
 }
 
 /*---------- Footer ----------*/
