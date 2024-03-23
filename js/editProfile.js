@@ -14,9 +14,9 @@ kindInput.value = view.kind;
 traitInput.value = view.trait;
 
 const isEmpty = (nickname, kind, trait) => {
-  if (nickname.length === 0) throw new Error('Please enter character name.');
-  if (kind.length === 0) throw new Error('Please enter character kind.');
-  if (trait.length === 0) throw new Error('Please enter character trait.');
+  if (nickname.length === 0) throw new Error('✍ Please enter character name.');
+  if (kind.length === 0) throw new Error('✍ Please enter character kind.');
+  if (trait.length === 0) throw new Error('✍ Please enter character trait.');
 }
 
 const editHanler = (e) => {
@@ -41,7 +41,28 @@ const editHanler = (e) => {
     alert(e.message);
     console.error(e);
   }
-  alert('The edit has been completed.')
+  alert('✨ Edit Complete ✨')
 };
 
 editForm.addEventListener('submit', editHanler);
+
+// 이미지 업로드 미리보기
+const previewImg = document.querySelector('#viewImg');
+const deleteImgBtn = document.querySelector('.upload-file .btn-cancel');
+
+const fileInput = document.querySelector('#file');
+fileInput.addEventListener('change', () => {
+  const fileReader = new FileReader();
+  fileReader.onload = ({ target }) => {
+    previewImg.src = target.result;
+    deleteImgBtn.classList.add('is-active');
+  };
+  fileReader.readAsDataURL(fileInput.files[0]);
+});
+
+// 업로드한 이미지 삭제
+deleteImgBtn.addEventListener('click', () => {
+  previewImg.src = '../assets/images/no_image.jpg';
+  fileInput.value = '';
+  deleteImgBtn.classList.remove('is-active');
+});

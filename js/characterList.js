@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
   setTimeout(() => {
     loading.style.opacity = '0';
     loading.style.visibility = 'hidden';
-  }, 700)
+  }, 500)
 });
 
 
