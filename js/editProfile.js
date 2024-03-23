@@ -1,6 +1,5 @@
 // 해당 프로필 수정하기
 const editForm = document.querySelector("#editForm");
-const editFormItem = document.querySelectorAll("#editForm input");
 
 const currentIndex = location.search;
 const index = location.search.split("=")[1];
@@ -8,11 +7,15 @@ const index = location.search.split("=")[1];
 const viewsObj = JSON.parse(localStorage.getItem("views"));
 const view = viewsObj[index];
 
-for (let i = 0; i < editFormItem.length; i++) {
-  const inputEl = editFormItem[i];
-  const id = inputEl.name;
-  inputEl.value = view[id];
-}
+// 입력 필드 가져오기
+const nicknameInput = document.querySelector("#nickname");
+const kindInput = document.querySelector("#kind");
+const traitInput = document.querySelector("#trait");
+
+// 폼 초기화
+nicknameInput.value = view.nickname;
+kindInput.value = view.kind;
+traitInput.value = view.trait;
 
 const isEmpty = (nickname, kind, trait) => {
   if (nickname.length === 0) throw new Error("이름을 입력해주세요.");
@@ -46,5 +49,3 @@ const editHanler = (e) => {
 };
 
 editForm.addEventListener("submit", editHanler);
-
-

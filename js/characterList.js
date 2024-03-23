@@ -21,7 +21,9 @@ const template = (item) => {
         </label>
       </div>
 
-      <div class="img woody"></div>
+      <div class="img-wrap">
+        <img src=${item.image ? item.image : `../assets/images/no_image.jpg`} alt="image" id="viewImg">
+      </div>
 
       <div class="item-info">
         <p class="name">
