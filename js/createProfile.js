@@ -1,9 +1,33 @@
+// 이미지 업로드 미리보기
+const previewImg = document.querySelector('#viewImg');
+const deleteImgBtn = document.querySelector('.upload-file .btn-cancel');
+
+const fileInput = document.querySelector('#fileInput');
+fileInput.addEventListener('change', () => {
+  const fileReader = new FileReader();
+  fileReader.onload = ({ target }) => {
+    deleteImgBtn.classList.add('is-active');
+    const imageDataURL = target.result;
+    previewImg.src = imageDataURL;
+    localStorage.setItem('profileImage', imageDataURL);
+  };
+  fileReader.readAsDataURL(fileInput.files[0]);
+});
+// 업로드한 이미지 삭제
+deleteImgBtn.addEventListener('click', () => {
+  deleteImgBtn.classList.remove('is-active');
+  previewImg.src = '../assets/images/no_image.jpg';
+  fileInput.value = '';
+});
+
+
 // 프로필 폼 입력 제출
 const newForm = document.querySelector('#newForm');
 
 class View {
-  constructor (indexNum, nicknameStr, kindStr,traitStr) {
+  constructor (indexNum, viewImgStr, nicknameStr, kindStr,traitStr) {
     this.index = indexNum;
+    this.ViewImg = viewImgStr;
     this.Nickname = nicknameStr;
     this.Kind= kindStr;
     this.Trait = traitStr;
@@ -27,6 +51,7 @@ class View {
 
 const submitHandler = (e) => {
   e.preventDefault();
+  const viewImg = e.target.viewImg.src;
   const nickname = e.target.nickname.value;
   const kind = e.target.kind.value;
   const trait = e.target.trait.value;
@@ -35,7 +60,7 @@ const submitHandler = (e) => {
     const viewsObj = JSON.parse(localStorage.getItem('views'));
 
     const index = viewsObj.length;
-    const instance = new View(index, nickname, kind, trait);
+    const instance = new View(index, viewImg, nickname, kind, trait);
     viewsObj.push(instance);
 
     const viewsStr = JSON.stringify(viewsObj);
@@ -50,24 +75,3 @@ const submitHandler = (e) => {
 };
 
 newForm.addEventListener('submit', submitHandler);
-
-// 이미지 업로드 미리보기
-const previewImg = document.querySelector('#viewImg');
-const deleteImgBtn = document.querySelector('.upload-file .btn-cancel');
-
-const fileInput = document.querySelector('#file');
-fileInput.addEventListener('change', () => {
-  const fileReader = new FileReader();
-  fileReader.onload = ({ target }) => {
-    previewImg.src = target.result;
-    deleteImgBtn.classList.add('is-active');
-  };
-  fileReader.readAsDataURL(fileInput.files[0]);
-});
-
-// 업로드한 이미지 삭제
-deleteImgBtn.addEventListener('click', () => {
-  previewImg.src = '../assets/images/no_image.jpg';
-  fileInput.value = '';
-  deleteImgBtn.classList.remove('is-active');
-});

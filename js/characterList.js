@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
   setTimeout(() => {
     loading.style.opacity = '0';
     loading.style.visibility = 'hidden';
-  }, 500)
+  }, 600)
 });
 
 
@@ -32,7 +32,7 @@ const template = (item) => {
       </div>
 
       <div class="img-wrap">
-        <img src=${item.image ? item.image : `../assets/images/no_image.jpg`} alt="image" id="viewImg">
+        <img src="${item.ViewImg}" alt="image" id="viewImg">
       </div>
 
       <div class="item-info">
