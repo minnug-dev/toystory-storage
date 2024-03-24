@@ -33,17 +33,17 @@ class View {
   }
 
   set Nickname(value) {
-    if(value.length === 0) throw new Error('✍ Please enter character name.');
+    if(value.length === 0) throw new Error('✍ Please enter the Name.');
     this.nickname = value;
   }
 
   set Kind(value) {
-    if(value.length === 0) throw new Error('✍ Please enter character kind.');
+    if(value.length === 0) throw new Error('✍ Please enter the Type.');
     this.kind = value;
   }
 
   set Trait(value) {
-    if(value.length === 0) throw new Error('✍ Please enter character trait.');
+    if(value.length === 0) throw new Error('✍ Please enter the Trait.');
     this.trait = value;
   }
 }

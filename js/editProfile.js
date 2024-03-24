@@ -42,9 +42,9 @@ if (view.ViewImg.includes('no_image') === false) {
 }
 
 const isEmpty = (nickname, kind, trait) => {
-  if (nickname.length === 0) throw new Error('✍ Please enter character name.');
-  if (kind.length === 0) throw new Error('✍ Please enter character kind.');
-  if (trait.length === 0) throw new Error('✍ Please enter character trait.');
+  if (nickname.length === 0) throw new Error('✍ Please enter the Name.');
+  if (kind.length === 0) throw new Error('✍ Please enter the Type.');
+  if (trait.length === 0) throw new Error('✍ Please enter the Trait.');
 }
 
 const editHanler = (e) => {
