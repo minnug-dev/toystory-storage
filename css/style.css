@@ -98,7 +98,7 @@ img {
   color: #fff;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: .1rem;
+  letter-spacing: .05rem;
   background-color: var(--color-black);
   border: var(--border-black);
   transition: background-color .3s, color .3s;

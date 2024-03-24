@@ -66,7 +66,7 @@ const submitHandler = (e) => {
     localStorage.setItem('views', viewsStr);
     location.href = '/page/view-profile.html?index=' + index;
 
-    alert("💛 Create New Profile 💛");
+    alert("💛 Successfully added New Profile.");
     location.href = '/';
   } catch (e) {
     alert(e.message);

@@ -71,7 +71,7 @@ const editHanler = (e) => {
     alert(e.message);
     console.error(e);
   }
-  alert('✨ Edit Complete ✨')
+  alert('✨ Successfully edited the Profile.')
   location.href = '/';
 };
 
