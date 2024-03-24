@@ -2,7 +2,7 @@
 
 #### ✔ 배포 주소
 
-[![HEROPY](./assets/images/snapshots/bg_toystory.jpg)](https://minjoo-vanillajs-crud.netlify.app/)<span stype="color:#a6a6a6;">이미지를 클릭하면 사이트로 이동합니다.</span>
+[![HEROPY](https://minjoo-vanillajs-crud.netlify.app/assets/images/snapshots/bg_toystory.jpg)](https://minjoo-vanillajs-crud.netlify.app/)<span stype="color:#a6a6a6;">이미지를 클릭하면 사이트로 이동합니다.</span>
 
 - 원하는 캐릭터 프로필을 추가하여, 나만의 토이스토리 캐릭터를 관리할 수 있도록 제작한 사이트입니다.
 - 저장된 캐릭터의 프로필을 수정, 삭제가 가능하도록 CRUD 기능을 구현하였습니다.
@@ -33,34 +33,34 @@
 
 ### ✔ 로딩 화면
 
-<img src="./assets/images/snapshots/loading.gif" />
+<img src="https://minjoo-vanillajs-crud.netlify.app/assets/images/snapshots/loading.gif" />
 
 ### ✔ 메인 화면
 
-<img src="./assets/images/snapshots/main.gif" />
+<img src="https://minjoo-vanillajs-crud.netlify.app/assets/images/snapshots/main.gif" />
 
 ### ✔ 메인 화면 - 검색 기능
 
-<img src="./assets/images/snapshots/search.gif" />
+<img src="https://minjoo-vanillajs-crud.netlify.app/assets/images/snapshots/search.gif" />
 
 ### ✔ 프로필 추가 화면
 
-<img src="./assets/images/snapshots/add.gif" />
+<img src="https://minjoo-vanillajs-crud.netlify.app/assets/images/snapshots/add.gif" />
 
 ### ✔ 프로필 상세 화면
 
-<img src="./assets/images/snapshots/detail.gif" />
+<img src="https://minjoo-vanillajs-crud.netlify.app/assets/images/snapshots/detail.gif" />
 
 ### ✔ 프로필 수정 화면
 
-<img src="./assets/images/snapshots/edit.gif" />
+<img src="https://minjoo-vanillajs-crud.netlify.app/assets/images/snapshots/edit.gif" />
 
 ### ✔ 프로필 삭제 화면
 
-<img src="./assets/images/snapshots/delete.gif" />
+<img src="https://minjoo-vanillajs-crud.netlify.app/assets/images/snapshots/delete.gif" />
 
 <br/><br/>
 
 ## <img src="https://minjoo-vanillajs-crud.netlify.app/assets/images/toystory.ico" width="22" height="22" /> User Flow
 
-<img src="./assets/images/snapshots/userflow.png" />
+<img src="https://minjoo-vanillajs-crud.netlify.app/assets/images/snapshots/userflow.png" />
