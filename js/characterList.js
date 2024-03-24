@@ -50,7 +50,7 @@ const template = (item) => {
       </div>
 
       <a href="/page/view-profile.html?index=${item.index}" class="btn">
-        ${item.nickname}&rsquo;<span class="text-small">s</span> 
+        view ${item.nickname}&rsquo;<span class="text-small">s</span>
         Profile
       </a>
     </li>
