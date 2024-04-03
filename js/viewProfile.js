@@ -25,7 +25,7 @@ if (viewImg) {
 // 해당 프로필 수정으로 이동
 const editBtn = document.querySelector('.btn-edit');
 
-const editBtnHandler = (e) => {
+const editBtnHandler = () => {
   location = '/page/edit-profile.html' + currentIndex;
 };
 
